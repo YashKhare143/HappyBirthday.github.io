@@ -329,6 +329,18 @@
             background-image: url(images/colour.jpg);
             background-size: cover;
             background-repeat: repeat-x;
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: text 60s linear infinite;
+        }
+        
+        @keyframes text {
+            0% {
+                background-position: left 0px top 10px;
+            }
+            40% {
+                background-position: left 8000px top 10px;
+            }
         }
     </style>
 </head>
