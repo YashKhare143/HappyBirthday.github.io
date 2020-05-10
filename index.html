@@ -369,6 +369,19 @@
             top: 0;
             bottom: 0;
             height: 200px;
+            width: 130px;
+            border-radius: 10px;
+            animation: pic 3s linear infinite;
+        }
+        
+        @keyframes pic {
+            0%,
+            100% {
+                box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.295);
+            }
+            50% {
+                box-shadow: 0 0 10px 5px rgba(240, 49, 214, 0.658);
+            }
         }
     </style>
 </head>
