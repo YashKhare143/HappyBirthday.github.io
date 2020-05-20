@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="swiper.min.css">
+    <link rel="stylesheet" href="style.css">
+
     <style>
         body,
         html {
@@ -387,14 +390,46 @@
 </head>
 
 <body>
-    <source src="hbd.mp3"></source>
-    Your browser isn't invited for super fun audio time.
- </audio
+
     <div class="text">
         <h1>HAPPY BIRTHDAY NAME</h1>
     </div>
-    <div class="pic">
-        <img src="images/pic2.jpg" alt="">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="imgbox"><img src="images/P2.jpg"></div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="imgbox"><img src="images/P1.jpg"></div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="imgbox"><img src="images/P3.jpg"></div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="imgbox"><img src="images/P4.jpg"></div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="imgbox"><img src="images/P5.jpg"></div>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#">
+                    <div class="imgbox"><img src="images/P6.jpg"></div>
+                </a>
+            </div>
+
+
+
+        </div>
     </div>
     <div class="balloon">
         <img src="images/balloons.png" alt="">
@@ -488,12 +523,31 @@
             </div>
         </div>
     </div>
+    <script src="swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 10,
+                stretch: 20,
+                depth: 500,
+                modifier: 1,
+                slideShadows: true,
+            },
+
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                desableOnInteraction: false,
+            }
+        });
+    </script>
     <canvas id="canvas"></canvas>
 
     <script>
-      
-
-
         "use strict";
 
         let canvas, width, height, ctx;
